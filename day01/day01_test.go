@@ -91,9 +91,9 @@ func TestPart1EdgeCases(t *testing.T) {
 
 func TestPart2Example(t *testing.T) {
 	example, _ := os.ReadFile("example.txt")
-	got := Part1(string(example))
+	got := Part2(string(example))
 	want := 6
 	if got != want {
-		t.Errorf("Part1() = %v, want %v", got, want)
+		t.Errorf("Part2() = %v, want %v", got, want)
 	}
 }
