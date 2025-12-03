@@ -51,18 +51,15 @@ func Part2(input string) int {
 		}
 		switch direction {
 		case 'R':
-			total_movement := current_number + amount
-			clicks := total_movement / 100
+			clicks := (current_number + amount) / 100
 			count += clicks
-			current_number = total_movement % 100
+			current_number = (current_number + amount) % 100
 
 		case 'L':
 			subtracted_number := current_number - amount
 			if subtracted_number < 0 {
-				// Count passes through 0 
-				clicks := 1 + ((-subtracted_number - current_number) / 100)
+				clicks := (-subtracted_number / 100) + 1
 				count += clicks
-				
 				modulo_number := subtracted_number % 100
 				current_number = 100 + modulo_number
 				if current_number == 100 {
