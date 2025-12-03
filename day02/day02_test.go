@@ -14,8 +14,8 @@ func TestPart1Example(t *testing.T) {
 	}
 }
 
-// func TestPart1(t *testing.T) {
-// 	input, _ := os.ReadFile("input.txt")
-// 	result := Part1(string(input))
-// 	t.Logf("Part 1: %d", result)
-// }
+func TestPart1(t *testing.T) {
+	input, _ := os.ReadFile("input.txt")
+	result := Part1(string(input))
+	t.Logf("Part 1: %d", result)
+}
